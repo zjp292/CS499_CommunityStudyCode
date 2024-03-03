@@ -28,6 +28,7 @@ def main_genre():
     #print(count_sorted.head(15))
     return(count_sorted)
 
+
 def get_sub_genre():
     sub_genre = []
     # get genre data from data set
