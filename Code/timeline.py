@@ -9,7 +9,7 @@ params = {
     'limit': 40
 }
 
-start = pd.Timestamp("2024-01-02", tz='utc')
+start = pd.Timestamp("2024-03-01", tz='utc')
 is_end = False
 
 results = []
