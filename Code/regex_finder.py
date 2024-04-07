@@ -19,20 +19,15 @@ def find_pattern(keywords, dataset):
     return filtered_posts
 
 def find_unique_posters(excel_file):
-    # Load Excel file into a DataFrame
     df = pd.read_csv(excel_file)
 
-    # Extract the first two portions of each URL
     df['poster_url'] = df.iloc[:, 9].str.split('/', n=3).str[:3].str.join('/')
-
 
     print(df['poster_url'])
 
-    # Count the number of unique posters
     unique_posters_count = df['poster_url'].nunique()
 
     return unique_posters_count
-
 
 # get the posts from the regex pattern finding function
 posts = find_pattern(keywords,'D:/commStudyTwo/month_data.csv')
