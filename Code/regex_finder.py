@@ -5,6 +5,7 @@ keywords = [
     'Dune',
     'Frank Herbert',
     'Dune Messiah',
+    'Children of Dune',
     'God Emperor of Dune'
 ]
 
@@ -45,6 +46,7 @@ posts['created_at'] = pd.to_datetime(posts['created_at'])
 posts['date'] = posts['created_at'].dt.date
 
 posts_date = posts.groupby('date').size()
+#print(posts_date)
 
 plt.figure(figsize=(10, 6))
 posts_date.plot(kind='line', marker='o', color='blue')
